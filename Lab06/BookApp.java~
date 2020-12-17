@@ -1,0 +1,9 @@
+public class BookApp{
+  public static void main(String[]args){
+    Person book1 = new Book();
+    book1.setTitle("Life of Pi");
+    book1.setPages(348);
+    book1.setPrice(28.90);
+    book1.displayBook();
+  }
+}

@@ -1,0 +1,18 @@
+import java.util.Scanner;
+import java.util.Random;
+
+public class IntCounterApp{
+  public static void main(String[]args){
+    
+    
+    
+    
+    
+  }
+  
+  public static [] makeArray(){
+    Random generator = new Random();
+    int[] anArray = new anArray[(generator.nextInt(10-6) + 5)]
+      
+  }
+}

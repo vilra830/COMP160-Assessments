@@ -1,0 +1,78 @@
+/* Shape.java
+ * Lab 21, COMP160,  2018
+ * graphical representation of a shape particularly shape
+ * with colour, x, y, width, height
+ * Coded by Rhea Villafuerte 20/09/2018
+ */
+
+
+package shapes;
+import java.util.Random;
+import java.awt.*;
+import javax.swing.Timer;
+
+public abstract class Shape{
+  protected int x , y , width, height; 
+  protected Color colour;
+  protected int moveX = 1 ; 
+  protected int moveY = 1 ;
+  protected int moveWidth = 2;
+  
+  
+  
+  /** constructor for the shape(circle)*/
+  public Shape(){
+    
+    width = randomRange(10, 30);
+    height = randomRange(10, 30);
+    x = randomRange(0 , (400 - width));
+    y = randomRange(0 , (400 - height));
+       
+    colour = new Color(randomRange (0, 225),randomRange (0, 225),randomRange (0, 225));
+    
+    if (y> 200){
+      moveY = -1;
+    }
+    
+    
+    }
+  
+  
+  /** generates random integers 
+    @param low type int lowest number
+    @param high type int highest number*/
+    public int randomRange(int low, int high){
+      Random generator = new Random();
+      return generator.nextInt(high-low+1) + low;
+    }
+    
+    /**draw this circle
+      @param g a Graphics object*/
+      public abstract void display(Graphics g);
+      
+      
+      
+      public void move(){
+      
+           if (width > 15 ){
+          
+          y += moveY;
+          
+          
+                
+        } else { 
+          x += moveX;
+          
+        }
+         
+        
+        if (x == 390 || x == 2) moveX = -moveX;
+        if(y == 390 || y == 2) moveY  = -moveY;
+        
+        
+      }
+      
+      
+      
+      
+}

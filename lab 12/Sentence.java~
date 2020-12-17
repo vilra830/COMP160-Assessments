@@ -1,0 +1,57 @@
+import java.util.Scanner;
+
+public class Sentence{
+  public static void main(String[]args){
+    Scanner scan = new Scanner(System.in);
+    System.out.println(" Enter a sentence");
+    int vowelCount = 0 , consonantCount = 0 , count = 0; 
+    
+    while (scan.hasNext()){
+      String sentence = scan.next(); 
+      System.out.println(sentence);
+      
+      char ch = sentence.charAt(count) ; 
+      
+      
+      switch (ch){
+        case 'a':
+          if (sentence.charAt(count) == 'a'){
+          vowelCount ++;
+        }
+          count++;
+          break;
+        case 'e':
+          if (sentence.charAt(count) == 'e'){
+          vowelCount ++;
+        }
+          count++;
+          break;
+        case 'i':
+          if (sentence.charAt(count) == 'i'){
+          vowelCount ++;
+        }
+          count++;
+          break;
+        case 'o':
+          if (sentence.charAt(count) == 'o'){
+          vowelCount ++;
+        }
+          count++;
+          break;
+        case 'u':
+          if (sentence.charAt(count) == 'u'){
+          vowelCount ++;
+        }
+          count++;
+          break;
+          
+        default:
+          consonantCount ++;
+          
+      }
+      
+      System.out.println("Vowel Count: " + vowelCount);
+      System.out.println("Consonant Count: " + consonantCount);
+    }
+  }
+}

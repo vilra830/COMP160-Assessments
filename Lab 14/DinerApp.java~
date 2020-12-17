@@ -1,0 +1,16 @@
+import javax.swing.*;
+/**
+ * Diner App
+ */
+public class DinerApp{
+  /** creates  an instance of the Snowman class, puts it on a frame and sets some essential parameters.
+    * You do not need to understand how this method works until later in the course*/
+  public static void main(String[]args){
+    JFrame frame = new JFrame("Table Seating Plan"); 
+    frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+    TablePanel tablepanel1 = new TablePanel();
+    frame.getContentPane().add (tablepanel1);
+    frame.pack();
+    frame.setVisible(true);
+  }
+}

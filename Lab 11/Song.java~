@@ -1,0 +1,40 @@
+public class Song {
+  private String songLine;
+
+  public Song(String sLine){
+    songLine = sLine;
+  }
+  
+  public String toString(){
+    return songLine;
+  }
+  
+  public void process(){
+    
+    String firstWord = songLine.substring(0, songLine.indexOf(' '));
+    String secondWord = songLine.substring((songLine.indexOf(' ')+1) , (songLine.indexOf(32 ,(songLine.indexOf(' ')+1 ))));
+    String subsequentWords = songLine.substring((songLine.indexOf(32 ,(songLine.indexOf(' ')+1 ))) + 1);
+    char firstletterThirdWord = subsequentWords.charAt(0);
+    
+    
+    
+    System.out.println("Length of " + songLine + " is : " + songLine.length());
+    System.out.println("Last character of " + songLine + " is : " + songLine.charAt(songLine.length() - 1));
+    System.out.println("First two words of " + songLine + " are : " + firstWord + " " +secondWord);
+    
+    if ( !((subsequentWords.indexOf(' ')+1 ) == -1)) {
+    
+    System.out.println("Subsequent words are : " + subsequentWords);
+    System.out.println("First letter of third word is : " + firstletterThirdWord);
+    System.out.println(songLine.toUpperCase());
+    System.out.println(songLine.replace(' ', 'x'));
+    System.out.println(songLine.indexOf('b'));
+    System.out.println(songLine);
+    
+    } else {
+      
+    System.out.println(songLine);
+    }
+  }
+    
+}

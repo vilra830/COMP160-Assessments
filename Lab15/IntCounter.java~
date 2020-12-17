@@ -1,0 +1,30 @@
+/* This class contains a single data field of type int array and a constructor that sets its value. It also contains a 
+ * method that sends an integer and finds its match with the array. 
+ */
+
+public class IntCounter{
+  private int[] numArray;
+  
+  
+  public IntCounter(int[] numArray ) {
+    this.numArray = numArray;
+    
+    for( int i : numArray){
+      System.out.print(i + " ");
+      
+    }
+    System.out.print("Array is of length " + numArray.length);
+  }
+  
+  public void showTarget(int target){
+    for (int i = 0 ; i < numArray.length; i++){
+      if (target == numArray[i]){
+        System.out.println("\tThere is a " + target + " at position " + i);
+      } 
+      }
+     
+    
+     System.out.println("Finished.");
+  }
+  
+}

@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class StringArray{
+  public static void main(String[] args){
+    
+    
+    String[] fruits = new String[3];
+    
+    for (int i = 0 ; i < fruits.length ; i++){
+      Scanner sc = new Scanner(System.in);
+      System.out.println("Enter a fruitname");
+      fruits[i] = sc.nextLine();
+    }
+    
+    
+    for(String fruit : fruits){
+      System.out.print("Guess what fruit I am " + fruit.substring(0,2) + "      " + fruit.substring(2).length() + " letters" + "   " );
+      Scanner scan = new Scanner(System.in);
+      if (scan.nextLine() == fruit.substring(2)){
+        System.out.println("Correct");
+      } else { 
+        System.out.println("Try again");
+        
+        
+      }
+    }
+  }
+  
+}

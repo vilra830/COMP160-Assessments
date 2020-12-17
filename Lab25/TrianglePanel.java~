@@ -1,0 +1,61 @@
+import java.awt.*;
+import javax.swing.*;
+import java.util.Scanner;
+
+
+/** FilePanel.java
+  * Lab 20, COMP160,  2018
+  * a JPanel which creates 3 instances of Triangles objects, 
+  * stores them in an array and draw graphical Triangle objects with names and perimeter
+  * Coded by Rhea Villafuerte 03/10/2018
+  */
+public class TrianglePanel extends JPanel{
+  private Triangle[] drawObjects = {new Triangle (45,30,45,160,150,85, "Rhea" ) , new Triangle(225,55,220,155,290,150,"summer"), 
+    new Triangle(220,165,75,285,225,240,"Sunshine")};
+  private int count;
+  private DrawingPanel drawPanel = new DrawingPanel();
+ 
+ 
+  
+  
+  
+  public TrianglePanel() {  
+    
+
+
+ 
+    setPreferredSize(new Dimension(400,400));
+    setBackground(Color.white);
+   // setLayout(new GridBagLayout());
+   //drawObjects[count] = new Triangle(x1, y1, x2, y2, x3, y3);
+   add(drawPanel);
+   drawPanel.setPreferredSize(new Dimension (350, 350));
+       add(drawPanel, BorderLayout.SOUTH);
+  }
+   private class DrawingPanel extends JPanel{
+  public void paintComponent(Graphics g){
+    
+    super.paintComponent(g);
+    
+     
+   /** for(int i = 0 ;  i <300 ;  i+=20){
+    g.drawString(Integer.toString(i), 20 , i);
+  }*/
+    for(int i = 0 ;  i <drawObjects.length ;  i++){
+     drawObjects[i].draw(g);
+    // count++;
+    }
+    } 
+  }
+  /** private class DrawingPanel extends JPanel{
+   public void paintComponent(Graphics g){
+    super.paintComponent(g);
+   for(int i = 0 ;  i <300 ;  i+=20){
+       g.drawString(Integer.toString(i), i , 20);
+     }
+  }
+  }
+*/
+
+  
+} 

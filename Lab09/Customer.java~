@@ -1,0 +1,39 @@
+
+
+public class Customer{
+  //data field declarations 
+  private String name;
+  private boolean student ;
+  private boolean child ;
+  private boolean confirmation;
+  
+  public String getName(){
+    return name;
+  }
+  
+  public boolean isChild(){
+    return child;
+  }
+  
+  public boolean isStudent(){
+    return student;
+  }
+  
+  public void setConfirmation(boolean confirm){      
+    confirmation = confirm;      
+  } 
+  
+  public boolean confirmed(){
+    return confirmation;
+  }
+  public Customer(String nameIn, int age, boolean studentIn){
+    name = nameIn;
+    child = age <= 16;
+    student = studentIn;
+    
+  }
+  
+  
+    
+  
+}
